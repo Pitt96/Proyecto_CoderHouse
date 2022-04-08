@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+/*---------Caracteristicas generales---------*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+}
+
+/*---------Caracteristicas de la navegacion---------*/
+
+header {
+    width: 100%;
+    
+}
+.nav {
+    background-color:#293241;
+    width: 100%;
+    height:80px;
+    color: #ffff;
+    position:fixed;
+    z-index: 10;
+}
+.nav-container{
+    display: flex;
+    height:100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav__item{
+    color: #fff;
+    font-size:32px;
+    --clippy:polygon(0 0,0 0,0 100%,0% 100%);
+}
+.nav__menu>ul{
+    text-align: center;
+}
+.nav__menu>ul>li{
+    font-family: 'Special Elite', cursive;
+    margin-bottom:70px;
+}
+.nav__item::after{
+    content: "";
+    display: block;
+    background-color:#fff;
+    width: 90%;
+    margin-top: 3px;
+    height:3px;
+    clip-path: var(--clippy);
+    transition:cli-path .5s;
+}
+.nav__item:hover{
+    --clippy:polygon(0 0,100% 0,100% 100%,0% 100%);
+}
+.nav__logo{
+    font-size:40px;
+    font-weight: 900;
+    font-family: 'Sacramento', cursive;
+}
+.nav__label>.fa-solid{
+    font-size:27px;
+    color:#fff;
+}
+.nav__label{
+    display: block;
+    cursor: pointer;
+}
+.nav__menu{
+    position: fixed;
+    top: 80px;
+    bottom:0;
+    background:black;
+    width:100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+    opacity: 0.9;
+    z-index: 5;
+}
+
+.nav__input:checked+.nav__menu{
+    clip-path: circle(100% at center);
+}
+.nav__input{
+    display:none;
+}
+/*------------------------INDEX------------------------*/
+
+.banner{
+    margin-top: 80px;
+    width: 100%;
+    height:320px;
+    display: block;
+    text-align: center;
+    align-items: center;
+    background-image: url(../Imagenes/banner.jpg);
+    background-size: 100% 320px;
+}
+
+.descripcion{
+    width:300px;
+    display:block;
+    position: relative;
+    color:white;
+    font-size:12px;
+    
+}
+.banner_des{
+    font-family: 'Special Elite', cursive;
+    padding-top: 60px;
+    padding-left: 20px;
+}
+.sobre_mi{
+    display: inline-block;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom: 20px;
+}
+.titulo_1{
+    font-size: 32px;
+    font-family: 'Kaushan Script', cursive;
+    margin-bottom: 20px;
+}
+.img_perfil{
+    width: 60px;
+    height:120px;
+    border-radius: 30%;
+    position: relative;
+    top: 235px;
+}
+.des_1{
+    font-size: 15px;
+    padding-top:120px;
+    width: 80%;
+    margin-left: 30px;
+    font-family: 'Special Elite', cursive;
+}
+.proyecto_vista{
+    
+    display: block;
+    width:100%;
+    text-align: center;
+    
+}
+.titulo_2{
+    font-size: 32px;
+    font-family: 'Kaushan Script', cursive;
+    margin-bottom: 20px;
+}
+/*------card------*/
+.con_card{
+    /* border:1px solid gray; */
+    display: inline-block;
+    width:100%;
+    margin-bottom:30px;
+    
+}
+.card{
+    /* border:1px solid orange; */
+    border-radius: 30px;
+    display: inline-block;
+    width:300px;
+    margin-bottom:15px;
+    background-color: #EAF2F8;
+    
+}
+.card img{
+    border-radius: 30px;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px;
+}
+.des_card{
+    margin-bottom:10px;
+    font-family: 'Special Elite', cursive;
+}
+.ver{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #239B56;
+    border-radius:15px;
+    color:white;
+}
+/*------------------------SKILLS------------------------*/
+
+
+.main_skills{
+    width: 100%;
+    
+}
+.skills{
+    width:100%;
+    height:auto;
+    text-align: center;
+    margin-top:120px;
+    margin-bottom:80px;
+    display: inline-block;
+    align-items: center;
+}
+.titulo_skills{
+    font-family: 'Kaushan Script', cursive;
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.con_des{
+    display: inline-block;
+}
+.des{
+    margin-bottom: 20px;
+    font-family: 'Special Elite', cursive;
+}
+.enlace{
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius:10px;
+    background:#1E8449;
+}
+.enlace span{
+    color: white;
+    font-weight: bold;
+}
+.fa-solid{
+    color:black;
+}
+.contenedor_card_skills{
+    display: inline-block;
+    width:100%;
+    align-items: center;
+    text-align: center;
+}
+.skills_card{
+    border-radius: 30px;
+    display: inline-block;
+    width:280px;
+    background-color: #EAF2F8;
+    margin-bottom: 20px;
+    
+}
+
+.skills_card img{
+    border-radius: 30px;
+    width: 278px;
+    height: 350px;
+    margin-bottom: 10px;
+}
+.s_card_des{
+    margin-top: 60px;
+    margin-bottom:15px;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size:30px;
+}
+
+/*------------------Portafolio------------------*/
+.con_portafolio{
+    width:100%;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    margin-top: 90px;
+}
+.p_titutlo{
+    font-size:30px;
+    font-family: 'Kaushan Script', cursive;
+    margin-bottom:10px;
+}
+.con_portafolio_card{
+    display: inline-block;
+    width:100%;
+    align-items: center;
+    text-align: center;
+}
+.con_card_3{
+    width: 100%;
+    display: inline-block;
+}
+.p_card{
+    border-radius: 30px;
+    display: inline-block;
+    width:280px;
+    margin: 15px;
+    background-color: #EAF2F8;
+    padding-bottom: 15px;
+    
+}
+.des_card_port{
+    font-family: 'Special Elite', cursive;
+}
+.p_card img{
+    border-radius: 30px;
+    width: 280px;
+    height: 350px;
+    margin-bottom: 10px;
+}
+.p_span{
+    padding: 10px;
+    background-color: #239B56;
+    border-radius:15px;
+    
+}
+.p_span a{
+    text-decoration: none;
+    color:white;
+}
+/*------------------SERVICIOS------------------*/
+
+.con_servicios{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-top: 138px;
+}
+.ser_titulo{
+    font-family: 'Kaushan Script', cursive;
+    font-size:30px;
+}
+
+.con_servicios_card{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 78px;
+    align-items: center;
+}
+
+.s_card img{
+    margin-top:30px;
+    margin-bottom:30px;
+    height:200px;
+    width:200px;
+    border-radius:50%;
+}
+.s_card{
+    border-radius: 30px;
+    display: inline-block;
+    width:280px;
+    margin: 15px;
+    background-color: #EAF2F8;
+    padding-bottom: 15px;
+}
+.des_card_port{
+    width: 100%;
+}
+
+.ser_h3{
+    padding-bottom: 10px;
+}
+/*------------------Contacto------------------*/
+
+.formulario{
+    width: 100%;
+    display: inline-block;
+    /* border:1px solid black; */
+    text-align: center;
+    margin-top:120px;
+    margin-bottom:60px;
+    padding-top:30px;
+    padding-bottom:60px;
+    border-radius:30px;
+}
+.con_titulo{
+    font-family: 'Kaushan Script', cursive;
+    padding-bottom: 40px;
+    font-size:35px;
+}
+
+.field{
+    margin-bottom:20px;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+}
+.field_des{
+    width:250px;
+    resize: none;
+    border:2px solid black;
+    border-radius: 10px;
+    margin-bottom:20px;
+}
+.btn{
+    width: 250px;
+    height:50px;
+    border-radius:20px;
+}
+/*------------------Footer------------------*/
+footer{
+    width:100%;
+    background:gray;
+    color: white;
+    display: grid;
+    text-align: center;
+    grid-template-areas: "titulo_footer titulo_footer titulo_footer"
+                          "footer_des    footer_des    footer_des"
+                          "fa-github      fa-instagram  fa-linkedin"
+                          "fa-whatsapp    fa-telegram    fa-facebook-f";
+    justify-content: center;
+}
+.titulo_footer{
+    font-family: 'Kaushan Script', cursive;
+    font-size:25px;
+    margin-top:20px;
+    margin-bottom:10px;
+    grid-area: titulo_footer;
+}
+.footer_des{
+    font-family: 'Special Elite', cursive;
+    margin-bottom:10px;
+    font-size:15px;
+    grid-area: footer_des;
+}
+
+.fa-brands{
+    color:black;
+    font-size:25px;
+    margin: 5px;
+}
+.iz_1{
+    grid-area: fa-github;
+    justify-self: end;
+}
+
+.cen_1{
+    grid-area: fa-instagram;
+    justify-self: center;
+}
+.der_1{
+    grid-area: fa-linkedin;
+    justify-self: start;
+}
+.iz_2{
+    grid-area: fa-whatsapp;
+    justify-self: end;
+}
+.cen_2{
+    grid-area: fa-telegram;
+    justify-self: center;
+}
+.der_2{
+    grid-area: fa-facebook-f;
+    justify-self: start;
+}
+/*------------------------------MEDIAS QUERYS------------------------------*/
+/* APLICANDO RESPONSIVE */
+@media all and (min-width: 768px) {
+    /*------------------Index------------------*/
+    .banner{
+        display: grid;
+        height: 400px;
+        grid-template-columns: 50% 50%;
+        background-size: 100% 400px;
+    }
+    .descripcion{
+        width: 100%;
+        justify-content: center;
+        top:-10px;
+        padding: 0 50px 0 50px;
+    }
+    .banner_des{
+        padding: 0;
+    }
+    .banner>.img_perfil{
+        justify-content: center;
+        margin-left: 50%;
+        top: 0;
+        width: 120px;
+        height:240px;
+        border-radius: 30%;
+    }
+    .des_1{
+        padding: 0;
+    }
+    .des_1>.descrip_mi{
+        width: 100%;
+        padding: 0;
+        padding-left: 20%;
+    }
+    /*------------------Skills------------------*/
+    .contenedor_card_skills{
+        display: grid;
+        grid-template-areas: "uno dos"
+        "tres cuatro";
+        justify-content: center;
+        gap: 10px;
+    }
+    #uno{
+        grid-area: uno;
+    }
+    #dos{
+        grid-area: dos;
+    }
+    #tres{
+        grid-area: tres;
+    }
+    #cuatro{
+        grid-area: cuatro;
+    }
+    /*------------------PORTAFOLIO------------------*/
+    .p_titutlo{
+        font-size:50px;
+    }
+    .con_portafolio_card{
+        display: grid;
+        grid-template-areas: "p1 p2"
+        "p3 p4"
+        "p5 p6"
+        "p7 p8"
+        "p9 p9";
+        justify-content: center;
+    }
+    #p1{
+        grid-area: p1;
+    }
+    #p2{
+        grid-area: p2;
+    }
+    #p3{
+        grid-area: p3;
+    }
+    #p4{
+        grid-area: p4;
+    }
+    #p5{
+        grid-area: p5;
+    }
+    #p6{
+        grid-area: p6;
+    }
+    #p7{
+        grid-area: p7;
+    }
+    #p8{
+        grid-area: p8;
+    }
+    #p9{
+        grid-area: p9;
+    }
+    /*---------------Servicios---------------*/
+    .ser_titulo{
+        font-size:50px;
+    }
+}
+@media all and (min-width: 1024px){
+    /*---------------Navegacion---------------*/
+    .nav-container{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        
+    }
+    .nav__label{
+        display: none;
+    }
+    .nav__logo{
+        margin-left: 80px;
+    }
+    .nav__menu{
+        margin-left: 45px;
+        position: static;
+        background:none;
+        height:auto;
+        clip-path:none;
+        opacity: none;
+        
+    }
+    .nav__menu>ul{
+        color: white;
+        display: grid;
+        grid-auto-flow: column;
+        font-size: 10px;
+        
+    }
+    
+    .nav__menu>ul>li{
+        margin-bottom: 0;
+        margin-left: 30px;
+    }
+    .nav__item{
+        font-size:20px;
+    }
+    /*------------------Index------------------*/
+    .banner{
+        height:849px;
+        background-size: 100% 849px;
+    }
+    .descripcion{
+        width: 100%;
+        justify-content: center;
+        top:-10px;
+        
+    }
+    .banner_des{
+        padding: 0;
+        font-size:30px;
+    }
+    .banner>.img_perfil{
+        top: 0;
+        width: 300px;
+        height:600px;
+        border-radius: 30%;
+        margin: 0 0 0 100px;
+    }
+    .des_1{
+        padding: 0;
+        padding-left: 20%;
+    }
+    .des_1>.descrip_mi{
+        width: 100%;
+        padding: 0;
+        
+    }
+    .titulo_1,.titulo_2{
+        font-size:50px;
+        
+    }
+    .descrip_mi{
+        font-size: 25px;
+    }
+    /*------------------Skills------------------*/
+    .titulo_skills{
+        font-size:50px;
+    }
+    .contenedor_card_skills{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .des{
+        font-size: 25px;
+        margin: 2% 20% 5% 20%;
+    }
+    /*------------------PORTAFOLIO------------------*/
+    .con_portafolio_card{
+        display: grid;
+        grid-template-areas: "p1 p2 p3"
+        "p4 p5 p6"
+        "p7 p8 p9";
+        justify-content: center;
+    }
+    #p1{
+        grid-area: p1;
+    }
+    #p2{
+        grid-area: p2;
+    }
+    #p3{
+        grid-area: p3;
+    }
+    #p4{
+        grid-area: p4;
+    }
+    #p5{
+        grid-area: p5;
+    }
+    #p6{
+        grid-area: p6;
+    }
+    #p7{
+        grid-area: p7;
+    }
+    #p8{
+        grid-area: p8;
+    }
+    #p9{
+        grid-area: p9;
+    }
+    /*--------------------------------Footer--------------------------------*/
+    footer{
+        width:100%;
+        background:gray;
+        color: white;
+        display: inline-block;
+        text-align: center;
+    }
+    .titulo_footer{
+        font-family: 'Kaushan Script', cursive;
+        font-size:25px;
+        margin-top:20px;
+        margin-bottom:10px;
+    }
+    .footer_des{
+        font-family: 'Special Elite', cursive;
+        margin-left: 270px;
+        margin-right: 270px;
+        margin-bottom:10px;
+    }
+    .footer_icons{
+        display: inline-block;
+        
+    }
+    .fa-brands{
+        color:black;
+        
+        font-size:25px;
+        margin: 5px;
+        
+    }
+    
+}
+
